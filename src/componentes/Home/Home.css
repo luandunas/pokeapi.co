@@ -1,0 +1,84 @@
+.homeMain{
+    min-height: calc(100vh - 130px);
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+
+.pageButtons{
+    display: flex;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageButtons > div{
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.previousPage, .nextPage{
+    min-width: 45%;
+    color: blue;
+    transition: background-color .3s ease;
+}
+
+.previousPage:hover, .nextPage:hover{
+    background-color: rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.currentPage{
+    min-width: 10%;
+    color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 2px;
+}
+
+/* Estilos dos cards */
+
+.pokemonCard{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 2px white solid;
+    padding: 20px 0px;
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 10px;
+    transition: background-color .3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+    .pokemonCard{
+        width: 50%;
+    }
+}
+
+.pokemonCard > img{
+    width: 100px;
+}
+
+.pokemonCard:hover{
+    cursor: pointer;
+    background-color: var(--cyan);
+}

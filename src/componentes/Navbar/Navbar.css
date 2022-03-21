@@ -1,0 +1,124 @@
+.navBar{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: var(--black);
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rightSide{
+    padding-left: 40px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-weight: 700;
+    padding-right: 40px;
+}
+
+.searchIcon{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border-bottom: thin solid var(--white);
+    box-sizing: border-box;
+    transition: color 0.3s, border-color 0.3s ease;
+}
+
+.searchIcon:hover{
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.searchInput{
+    text-align: center;
+    height: 30px;
+    width: 220px;
+    background-color: var(--black);
+    border: none;
+    box-sizing: border-box;
+    border-bottom: thin solid var(--white);
+    color: var(--white);
+    font-weight: 700;
+    transition: border-color 0.3s ease;
+}
+
+.searchInput:focus{
+    outline: none;
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.searchInput:focus + .searchIcon{
+    color: var(--white);
+    border-color: var(--white);
+}
+
+/* estilos dropdown */
+.dropdownContent{
+    display: none;
+    min-width: 180px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.sortBy{
+    min-width: 180px;
+    line-height: 30px;
+    height: 30px;
+    border-bottom: thin solid white;
+    color: var(--white);
+    box-sizing: border-box;
+}
+
+.sortBy > p{
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+.sortBy:hover{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.sortBy:hover{
+    cursor: pointer;
+}
+
+.sortBy:hover .dropdownContent{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    color: var(--black);
+    background-color: white;
+}
+
+.dropdownOption{
+    transition: background-color .3s ease;
+    padding-left: 5px;
+}
+
+.dropdownOption:hover{
+    background-color: var(--cyan);
+}
+
+/* mudando placeholder ds inputs */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--white);
+    opacity: .7; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--white);
+    opacity: .7;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--white);
+    opacity: .7;
+  }
