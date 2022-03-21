@@ -9,8 +9,9 @@ const Home = (props) => {
     let setPokemons = props.setPokemons;
     let setSortByFunc = props.sortBy;
     let sortByType = props.sortByType;
+    let responseApi = props.responseApi;
+    let setResponseApi = props.setResponseApi;
 
-    const [responseApi, setResponseApi] = useState({});
     const [currentPage, setCurrentPage] = useState(1);
 
     //primeiro fetch para pegar pokemons sem filtro
@@ -27,6 +28,10 @@ const Home = (props) => {
             Promise.all(jsonPromises).then(res => {
                 setSortByFunc(res, sortByType, setPokemons)
             });
+        }
+
+        if (responseApi.name) {
+            setPokemons([responseApi])
         }
 
     }, [responseApi]);

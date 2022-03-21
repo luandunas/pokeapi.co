@@ -15,16 +15,18 @@ function sortBy(pokemons, sortType, setPokemons) {
 }
 
 function App() {
+  const [responseApi, setResponseApi] = useState({});
   const [pokemons, setPokemons] = useState([]);
   const [sortByType, setSortByType] = useState("id");
+
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar pokemons={pokemons} setPokemons={setPokemons} sortBy={sortBy} sortByType={sortByType} setSortByType={setSortByType}></Navbar>
+        <Navbar pokemons={pokemons} setPokemons={setPokemons} sortBy={sortBy} sortByType={sortByType} setSortByType={setSortByType} setResponseApi={setResponseApi}></Navbar>
       </header>
 
       <main>
-        <Home pokemons={pokemons} setPokemons={setPokemons} sortBy={sortBy} sortByType={sortByType}></Home>
+        <Home responseApi={responseApi} setResponseApi={setResponseApi} pokemons={pokemons} setPokemons={setPokemons} sortBy={sortBy} sortByType={sortByType}></Home>
       </main>
     </div>
   );
