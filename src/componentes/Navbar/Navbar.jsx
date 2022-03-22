@@ -32,7 +32,7 @@ const Navbar = (props) => {
                 </div>
             </div>
             <div className="search">
-                <input type="text" name="searchInput" id="searchInput" className="searchInput" placeholder="Pikachu" /><div className="searchIcon" onClick={(e) => {searchPokemon(document.getElementById("searchInput").value, setResponseApi)}}>&#x1F50E;&#xFE0E;</div>
+                <input type="text" name="searchInput" id="searchInput" className="searchInput" placeholder="Pikachu" onKeyDown={(e) => {if (e.key != "Enter") return; searchPokemon(document.getElementById("searchInput").value, setResponseApi)}}/><div className="searchIcon" onClick={(e) => {searchPokemon(document.getElementById("searchInput").value, setResponseApi)}}>&#x1F50E;&#xFE0E;</div>
             </div>
         </div>
     )
