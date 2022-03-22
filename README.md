@@ -2,7 +2,7 @@
 
 [API utilizada neste projeto](https://pokeapi.co/).
 
-#[Deploy do projeto no Github Pages](https://luandunas.github.io/pokeapi.co/).
+[Deploy do projeto no Github Pages](https://luandunas.github.io/pokeapi.co/).
 
 ## Notas
 
